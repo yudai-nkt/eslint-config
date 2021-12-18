@@ -1,0 +1,36 @@
+{
+  "name": "@yudai-nkt/eslint-config",
+  "version": "0.1.0",
+  "description": "My shareable config for ESLint",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./presets/*.js"
+  },
+  "scripts": {
+    "format": "prettier --write *.js presets",
+    "lint": "eslint --fix *.js presets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yudai-nkt/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Yudai Nakata <yudai.nkt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yudai-nkt/eslint-config/issues"
+  },
+  "homepage": "https://github.com/yudai-nkt/eslint-config#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.2.1",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "prettier": "^2.5.1"
+  }
+}
