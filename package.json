@@ -8,6 +8,9 @@
     "./*": "./presets/*.js"
   },
   "files": ["index.js", "presets"],
+  "engines": {
+    "node": ">=16.9.0"
+  },
   "scripts": {
     "format": "prettier --write *.js presets",
     "lint": "eslint --fix *.js presets",

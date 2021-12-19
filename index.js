@@ -1,17 +1,16 @@
 // @ts-check
 const { execSync } = require("child_process");
 
-const packageJson = JSON.parse(
+const { dependencies } = JSON.parse(
   execSync("npm ls --json", { encoding: "utf-8" })
 );
-const dependencies = Object.keys(packageJson.dependencies);
 /**
  * Check if all of the given packages are installed in the project.
  * @param {string[]} packages - Dependecies to check.
  * @return {boolean} `true` if all packages are installed, `false` otherwise.
  */
 const isInstalled = (packages) =>
-  packages.every((pkg) => dependencies.includes(pkg));
+  packages.every((pkg) => Object.hasOwn(dependencies, pkg));
 
 const configs = ["./presets/base"];
 if (
