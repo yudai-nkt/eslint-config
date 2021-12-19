@@ -10,7 +10,8 @@
   "scripts": {
     "format": "prettier --write *.js presets",
     "lint": "eslint --fix *.js presets",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,14 @@
   },
   "homepage": "https://github.com/yudai-nkt/eslint-config#readme",
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@types/eslint": "^8.2.1",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-unicorn": "^39.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.3",
     "prettier": "^2.5.1"
   }
 }
