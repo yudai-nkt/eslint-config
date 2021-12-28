@@ -1,5 +1,12 @@
 # @yudai-nkt/eslint-config
 
+[![test](https://github.com/yudai-nkt/eslint-config/actions/workflows/test.yml/badge.svg)](https://github.com/yudai-nkt/eslint-config/actions/workflows/test.yml)
+[![version](https://img.shields.io/npm/v/yudai-nkt/eslint-config)](https://www.npmjs.com/package/@yudai-nkt/eslint-config)
+[![node-version](https://img.shields.io/node/v/@yudai-nkt/eslint)](https://www.npmjs.com/package/@yudai-nkt/eslint-config)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![license](https://img.shields.io/github/license/yudai-nkt/eslint-config)](https://github.com/yudai-nkt/eslint-config/blob/main/LICENSE.md)
+
 My shareable config for ESLint.
 
 ## Installation
