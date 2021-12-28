@@ -19,6 +19,6 @@ module.exports = {
     "unicorn/prefer-node-protocol": "error",
     // As many of the abbreviations targeted in this rule are popular enough,
     // disable it.
-    "unicorn/prevent-abbreviations": "off"
+    "unicorn/prevent-abbreviations": "off",
   },
 };
