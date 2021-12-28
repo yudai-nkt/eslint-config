@@ -39,14 +39,16 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/eslint": "^8.2.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.3",
+    "uvu": "^0.5.2",
+    "prettier": "^2.5.1"
+  },
+  "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-unicorn": "^39.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.3",
-    "prettier": "^2.5.1",
-    "uvu": "^0.5.2"
+    "eslint-plugin-unicorn": "^39.0.0"
   }
 }
