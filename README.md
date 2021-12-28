@@ -4,9 +4,14 @@ My shareable config for ESLint.
 
 ## Installation
 
-To be written.
+This package is available on the NPM registry.
+Install `@yudai-nkt/eslint-config` using your favortite package manager.
+
+Note that `npm` v7 or later automatically installs peer dependencies that you might **_not_** want to install.
+Make sure to specify the `--legacy-peer-deps` option if that's the case.
 
 ## Usage
+
 Just add `@yudai-nkt` to extends in your ESLint configuration:
 
 ```json
@@ -37,5 +42,6 @@ extends configurations recommended by [`@typescript-eslint/eslint-plugin`](https
 and configures some additional rules.
 
 ## License
+
 This package is distributed under the MIT License.
 See [LICENSE.md](./LICENSE.md) for details.
