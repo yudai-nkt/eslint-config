@@ -7,14 +7,17 @@
     ".": "./index.js",
     "./*": "./presets/*.js"
   },
-  "files": ["index.js", "presets"],
+  "files": [
+    "index.js",
+    "presets"
+  ],
   "engines": {
     "node": ">=16.9.0"
   },
   "scripts": {
-    "format": "prettier --write *.js presets",
-    "lint": "eslint --fix *.js presets",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write *.js presets __tests__",
+    "lint": "eslint --fix *.js presets __tests__/*.mjs",
+    "test": "uvu __tests__ --ignore utils.mjs --ignore dummy.ts",
     "prepare": "husky install"
   },
   "repository": {
@@ -35,11 +38,14 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/eslint": "^8.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-unicorn": "^39.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.3",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "uvu": "^0.5.2"
   }
 }
