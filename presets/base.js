@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     "no-floating-decimal": "error",
+    "no-multiple-empty-lines": ["error", { max: 1 }],
     "no-throw-literal": "error",
     "no-var": "error",
     "prefer-const": "error",

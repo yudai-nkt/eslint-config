@@ -20,6 +20,16 @@ Base("Should not have leading/trailing commas in decimals.", async () => {
   assert.is(ruleId, "no-floating-decimal");
 });
 
+Base("Should not contain 2 consecutive blank lines.", async () => {
+  const {
+    errorCount,
+    ruleIds: [ruleId],
+  } = await listErrors(eslint, "const foo = 0;\n\n\nconst bar = 1;");
+
+  assert.is(errorCount, 1);
+  assert.is(ruleId, "no-multiple-empty-lines");
+});
+
 Base("Should not throw literals.", async () => {
   const {
     errorCount,
