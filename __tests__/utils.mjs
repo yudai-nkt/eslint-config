@@ -19,7 +19,7 @@ export const listErrors = async (
   }
   const [{ errorCount, messages }] = await eslint.lintText(
     code,
-    isTypeScript ? { filePath: "__tests__/dummy.ts" } : {}
+    isTypeScript ? { filePath: "__tests__/dummy.ts" } : {filePath: "__tests__/dummy.js"}
   );
 
   return { errorCount, ruleIds: messages.map(({ ruleId }) => ruleId) };

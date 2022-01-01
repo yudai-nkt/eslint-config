@@ -13,6 +13,9 @@ const isInstalled = (packages) =>
   packages.every((pkg) => Object.hasOwn(dependencies, pkg));
 
 const configs = ["./presets/base"];
+if (isInstalled(["jest", "eslint-plugin-jest"])) {
+  configs.push("./presets/jest");
+}
 if (
   isInstalled([
     "typescript",
