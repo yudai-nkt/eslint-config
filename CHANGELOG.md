@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/yudai-nkt/eslint-config/compare/v0.2.0...v0.3.0) (2022-01-02)
+
+
+### Features
+
+* add a Jest preset ([9462fa2](https://github.com/yudai-nkt/eslint-config/commit/9462fa21993159ff7cc2680ab0100c1135821736))
+* support ES2022 in base preset (e.g., TLA) ([1e690b0](https://github.com/yudai-nkt/eslint-config/commit/1e690b04dea44a843a807ebd00d24a1b8c814a23))
+
 ## [0.2.0](https://github.com/yudai-nkt/eslint-config/compare/v0.1.0...v0.2.0) (2021-12-29)
 
 ### Features
