@@ -1,14 +1,33 @@
-import { ESLint } from "eslint";
+import { ESLint, Linter } from "eslint";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { suite } from "uvu";
 import * as assert from "uvu/assert";
-import { listErrors } from "./utils.mjs";
+import {
+  listErrors,
+  filterEnabledRuleIds,
+  filterDeprecatedRuleIds,
+} from "./utils.mjs";
 
 const eslint = new ESLint({
   overrideConfigFile: "./presets/base.js",
   useEslintrc: false,
 });
+const deprecatedRuleIds = [
+  ...filterDeprecatedRuleIds([...new Linter().getRules()]),
+  ...filterDeprecatedRuleIds(
+    Object.entries(eslintPluginUnicorn.rules),
+    "unicorn"
+  ),
+];
+const enabledRuleIds = await filterEnabledRuleIds(eslint);
 
 const Base = suite("Test suite for the base preset");
+
+for (const ruleId of deprecatedRuleIds) {
+  Base(`Should not enable deprecated rule: ${ruleId}`, () => {
+    assert.not.ok(enabledRuleIds.has(ruleId));
+  });
+}
 
 Base("Should not have leading/trailing commas in decimals.", async () => {
   const {

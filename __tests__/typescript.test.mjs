@@ -1,14 +1,30 @@
 import { ESLint } from "eslint";
 import { suite } from "uvu";
 import * as assert from "uvu/assert";
-import { listErrors } from "./utils.mjs";
+import { rules } from "@typescript-eslint/eslint-plugin";
+import {
+  listErrors,
+  filterEnabledRuleIds,
+  filterDeprecatedRuleIds,
+} from "./utils.mjs";
 
 const eslint = new ESLint({
   overrideConfigFile: "./presets/typescript.js",
   useEslintrc: false,
 });
+const deprecatedRuleIds = filterDeprecatedRuleIds(
+  Object.entries(rules),
+  "@typescript-eslint"
+);
+const enabledRuleIds = await filterEnabledRuleIds(eslint, true);
 
 const TypeScript = suite("Test suite for the TypeScript preset");
+
+for (const ruleId of deprecatedRuleIds) {
+  TypeScript(`Should not enable deprecated rule: ${ruleId}`, () => {
+    assert.not.ok(enabledRuleIds.has(ruleId));
+  });
+}
 
 TypeScript("Should use T[] instead of Array<T>.", async () => {
   const {

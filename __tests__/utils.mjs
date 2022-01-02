@@ -19,8 +19,43 @@ export const listErrors = async (
   }
   const [{ errorCount, messages }] = await eslint.lintText(
     code,
-    isTypeScript ? { filePath: "__tests__/dummy.ts" } : {filePath: "__tests__/dummy.js"}
+    isTypeScript
+      ? { filePath: "__tests__/dummy.ts" }
+      : { filePath: "__tests__/dummy.js" }
   );
 
   return { errorCount, ruleIds: messages.map(({ ruleId }) => ruleId) };
 };
+
+/**
+ * Extract ESLint rules enabled with a given instance.
+ * @param {import("eslint").ESLint} eslint ESLint instance.
+ * @param {boolean} isTypeScript If `true`, lint as a TypeScript file.
+ * @returns {Set<string>} Set of rule IDs whose severity is set to either warn or error.
+ */
+export const filterEnabledRuleIds = async (eslint, isTypeScript = false) => {
+  const { rules } = await eslint.calculateConfigForFile(
+    isTypeScript ? "__tests__/dummy.ts" : "__tests__/dummy.js"
+  );
+  const enabledRuleIds = Object.entries(rules).flatMap(([ruleId, [severity]]) =>
+    severity !== "off" ? [ruleId] : []
+  );
+
+  return new Set(enabledRuleIds);
+};
+
+/**
+ * Given a set of ESLint rules, extract the ones that have been deprecated.
+ * @param {[string, import("eslint").Rule.RuleModule][]} rules Array of tuples containg rule ID and the corresponding module.
+ * @param {string} prefix Prefix to distinguish third party plugins.
+ * @returns {string[]} Array of rule IDs that have been deprecated.
+ */
+export const filterDeprecatedRuleIds = (rules, prefix = "") =>
+  rules.flatMap(
+    ([
+      ruleId,
+      {
+        meta: { deprecated },
+      },
+    ]) => (deprecated ? [`${prefix !== "" ? `${prefix}/` : ""}${ruleId}`] : [])
+  );
