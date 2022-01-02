@@ -2,7 +2,7 @@
 /** @type import('eslint').Linter.BaseConfig */
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 2022,
   },
   extends: ["eslint:recommended", "plugin:unicorn/recommended"],
   env: {
