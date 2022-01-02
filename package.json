@@ -19,8 +19,7 @@
     "lint": "eslint --fix *.js presets __tests__/*.mjs",
     "test:uvu": "uvu __tests__ --ignore utils.mjs --ignore dummy.ts",
     "test": "npm run format && npm run lint && npm run test:uvu",
-    "prepare": "husky install",
-    "postpublish": "git push --follow-tags origin main"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -47,7 +46,6 @@
     "lint-staged": "^12.1.3",
     "prettier": "^2.5.1",
     "semantic-release": "^18.0.1",
-    "standard-version": "^9.3.2",
     "uvu": "^0.5.2"
   },
   "peerDependencies": {
