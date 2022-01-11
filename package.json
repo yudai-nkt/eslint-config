@@ -17,7 +17,7 @@
   "scripts": {
     "format": "prettier --write *.js presets __tests__ .github",
     "lint": "eslint --fix *.js presets __tests__/*.mjs",
-    "test:uvu": "uvu __tests__ --ignore utils.mjs --ignore dummy.ts",
+    "test:uvu": "uvu __tests__ '.test.mjs$'",
     "test": "npm run format && npm run lint && npm run test:uvu",
     "prepare": "husky install"
   },
