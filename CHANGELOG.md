@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.4.1](https://github.com/yudai-nkt/eslint-config/compare/v0.4.0...v0.4.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* fix incorrect detection of uvu ([840732f](https://github.com/yudai-nkt/eslint-config/commit/840732f957cb20c993be2c7f67df0b16716112cf))
+
 ## [0.4.0](https://github.com/yudai-nkt/eslint-config/compare/v0.3.0...v0.4.0) (2022-01-28)
 
 
