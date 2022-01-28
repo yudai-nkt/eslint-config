@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/yudai-nkt/eslint-config/compare/v0.3.0...v0.4.0) (2022-01-28)
+
+
+### Features
+
+* add an uvu preset ([a72a6cf](https://github.com/yudai-nkt/eslint-config/commit/a72a6cfd37f75911390871b421c76f3629c749ed))
+
 ## [0.3.0](https://github.com/yudai-nkt/eslint-config/compare/v0.2.0...v0.3.0) (2022-01-02)
 
 
