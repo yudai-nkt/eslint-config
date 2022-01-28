@@ -10,6 +10,7 @@ const { dependencies } = JSON.parse(
  * @return {boolean} `true` if all packages are installed, `false` otherwise.
  */
 const isInstalled = (packages) =>
+  // @ts-expect-error
   packages.every((pkg) => Object.hasOwn(dependencies, pkg));
 
 const configs = ["./presets/base"];
