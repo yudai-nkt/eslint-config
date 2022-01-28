@@ -15,8 +15,8 @@
     "node": ">=16.9.0"
   },
   "scripts": {
-    "format": "prettier --write *.js presets __tests__ .github",
-    "lint": "eslint --fix *.js presets __tests__/*.mjs",
+    "format": "prettier --check *.js presets __tests__ .github",
+    "lint": "eslint *.js presets __tests__/*.mjs",
     "test:uvu": "uvu __tests__ '.test.mjs$'",
     "test": "npm run format && npm run lint && npm run test:uvu",
     "prepare": "husky install"
