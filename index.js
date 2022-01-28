@@ -16,6 +16,9 @@ const configs = ["./presets/base"];
 if (isInstalled(["jest", "eslint-plugin-jest"])) {
   configs.push("./presets/jest");
 }
+if (isInstalled(["uvu", "eslint-plugin-uv"])) {
+  configs.push("./presets/uvu");
+}
 if (
   isInstalled([
     "typescript",
