@@ -32,30 +32,17 @@ This will check your dependencies and automatically load the neccessary configur
 ## Presets
 
 While the usage mentioned above should work out of the box, you can manually load the presets listed below.
+To load these presets, `@yudai-nkt/eslint-config/` needs to be prefixed with the name (e.g., `@yudai-nkt/eslint-config/base`).
 
-### `@yudai-nkt/eslint-config/base`
-
-This preset extends configurations recommended by the core ESLint team and [`eslint-plugin-unicorn`](https://www.npmjs.com/package/eslint-plugin-unicorn),
-and configures some additional rules.
-
-### `@yudai-nkt/eslint-config/jest`
-
-This preset extends configurations recommended by [`eslint-plugin-jest`](https://www.npmjs.com/package/eslint-plugin-jest),
-and configures some additional rules for common test file patterns.
-
-### `@yudai-nkt/eslint-config/prettier`
-
-This preset extends [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier).
-
-### `@yudai-nkt/eslint-config/typescript`
-
-This presets specifies [`@typescript-eslint/parser`](https://www.npmjs.com/package/@typescript-eslint/parser) as a parser to lint TypeScript source codes,
-extends configurations recommended by [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin),
-and configures some additional rules.
-
-### `@yudai-nkt/eslint-config/uvu`
-
-This preset enables all the rules defined by [`eslint-plugin-uvu`](https://www.npmjs.com/package/eslint-plugin-uvu) for common test file patterns.
+<!-- prettier-ignore-start -->
+| Preset name | Description |
+| ------- | ----------- |
+| `base` | Extends configurations recommended by the core ESLint team and [`eslint-plugin-unicorn`](https://www.npmjs.com/package/eslint-plugin-unicorn), and configures some additional rules. |
+| `jest` | Extends configurations recommended by [`eslint-plugin-jest`](https://www.npmjs.com/package/eslint-plugin-jest), and configures some additional rules for common test file patterns. |
+| `prettier` | Extends [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier). |
+| `typescript` | Specifies [`@typescript-eslint/parser`](https://www.npmjs.com/package/@typescript-eslint/parser) as a parser to lint TypeScript source codes, extends configurations recommended by [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), and configures some additional rules. |
+| `uvu` | Enables all the rules defined by [`eslint-plugin-uvu`](https://www.npmjs.com/package/eslint-plugin-uvu) for common test file patterns. |
+<!-- prettier-ignore-end -->
 
 ## License
 
