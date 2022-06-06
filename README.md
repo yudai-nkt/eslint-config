@@ -40,6 +40,7 @@ To load these presets, `@yudai-nkt/eslint-config/` needs to be prefixed with the
 | `base` | Extends configurations recommended by the core ESLint team and [`eslint-plugin-unicorn`](https://www.npmjs.com/package/eslint-plugin-unicorn), and configures some additional rules. |
 | `jest` | Extends configurations recommended by [`eslint-plugin-jest`](https://www.npmjs.com/package/eslint-plugin-jest), and configures some additional rules for common test file patterns. |
 | `prettier` | Extends [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier). |
+| `react` | Extends configurations recommended by [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y), [`eslint-plugin-react`](https://www.npmjs.com/package/eslint-plugin-react), and [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks), and configures some additional rules. |
 | `typescript` | Specifies [`@typescript-eslint/parser`](https://www.npmjs.com/package/@typescript-eslint/parser) as a parser to lint TypeScript source codes, extends configurations recommended by [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), and configures some additional rules. |
 | `uvu` | Enables all the rules defined by [`eslint-plugin-uvu`](https://www.npmjs.com/package/eslint-plugin-uvu) for common test file patterns. |
 <!-- prettier-ignore-end -->
