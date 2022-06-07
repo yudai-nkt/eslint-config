@@ -22,6 +22,16 @@ if (isInstalled(["uvu", "eslint-plugin-uvu"])) {
 }
 if (
   isInstalled([
+    "react",
+    "eslint-plugin-jsx-a11y",
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks",
+  ])
+) {
+  configs.push("./presets/react");
+}
+if (
+  isInstalled([
     "typescript",
     "@typescript-eslint/parser",
     "@typescript-eslint/eslint-plugin",
