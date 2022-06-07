@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.5.1](https://github.com/yudai-nkt/eslint-config/compare/v0.5.0...v0.5.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* autoload react preset when react is detected ([7e941d0](https://github.com/yudai-nkt/eslint-config/commit/7e941d061e913d74ee0ef292f2e33208612c21ec))
+
 ## [0.5.0](https://github.com/yudai-nkt/eslint-config/compare/v0.4.1...v0.5.0) (2022-06-06)
 
 
