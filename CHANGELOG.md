@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/yudai-nkt/eslint-config/compare/v0.4.1...v0.5.0) (2022-06-06)
+
+
+### Features
+
+* add a react preset ([4bb7218](https://github.com/yudai-nkt/eslint-config/commit/4bb721859f6edb54f11a2952f2f5014401c45a85))
+
 ### [0.4.1](https://github.com/yudai-nkt/eslint-config/compare/v0.4.0...v0.4.1) (2022-01-28)
 
 
