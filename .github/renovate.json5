@@ -1,4 +1,4 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: "github>yudai-nkt/renovate-config:base.json5",
+  extends: ["github>yudai-nkt/renovate-config:base.json5"],
 }
