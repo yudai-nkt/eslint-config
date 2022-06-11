@@ -2,7 +2,7 @@
 const { execSync } = require("child_process");
 
 const { dependencies } = JSON.parse(
-  execSync("npm ls --json", { encoding: "utf-8" })
+  execSync("npm ls --json", { encoding: "utf8" })
 );
 /**
  * Check if all of the given packages are installed in the project.
