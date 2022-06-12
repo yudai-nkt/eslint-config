@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/yudai-nkt/eslint-config/compare/v0.5.1...v0.6.0) (2022-06-12)
+
+
+### Features
+
+* widen supported range of ESLint unicorn ([9a2b62e](https://github.com/yudai-nkt/eslint-config/commit/9a2b62ef794c192582e16d0c13fcc1bd5e7ccb0f))
+
 ### [0.5.1](https://github.com/yudai-nkt/eslint-config/compare/v0.5.0...v0.5.1) (2022-06-07)
 
 
