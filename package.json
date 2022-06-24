@@ -48,7 +48,7 @@
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "semantic-release": "^19.0.3",
-    "uvu": "^0.5.3"
+    "uvu": "^0.5.4"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.0",
