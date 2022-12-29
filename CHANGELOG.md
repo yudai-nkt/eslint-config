@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/yudai-nkt/eslint-config/compare/v0.6.0...v0.7.0) (2022-12-29)
+
+
+### Features
+
+* add missing semver for eslint-plugin-unicorn ([a5670b0](https://github.com/yudai-nkt/eslint-config/commit/a5670b0b20edaafef1685b46f7550c5e3682a712))
+
 ## [0.6.0](https://github.com/yudai-nkt/eslint-config/compare/v0.5.1...v0.6.0) (2022-06-12)
 
 
