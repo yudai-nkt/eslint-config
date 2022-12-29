@@ -38,7 +38,7 @@ export const filterEnabledRuleIds = async (eslint, isTypeScript = false) => {
     isTypeScript ? "__tests__/dummy.ts" : "__tests__/dummy.js"
   );
   const enabledRuleIds = Object.entries(rules).flatMap(([ruleId, [severity]]) =>
-    severity !== "off" ? [ruleId] : []
+    severity === "off" ? [] : [ruleId]
   );
 
   return new Set(enabledRuleIds);
@@ -57,5 +57,5 @@ export const filterDeprecatedRuleIds = (rules, prefix = "") =>
       {
         meta: { deprecated },
       },
-    ]) => (deprecated ? [`${prefix !== "" ? `${prefix}/` : ""}${ruleId}`] : [])
+    ]) => (deprecated ? [`${prefix === "" ? "" : `${prefix}/`}${ruleId}`] : [])
   );
